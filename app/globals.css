@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-sand text-ink font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme("colors.marigold");
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* The "route line" signature motif — a dashed path used to connect
+     sections, echoing a route drawn on a map. */
+  .route-divider {
+    @apply relative h-px w-full;
+    background-image: repeating-linear-gradient(
+      90deg,
+      theme("colors.route") 0 10px,
+      transparent 10px 22px
+    );
+  }
+
+  .route-divider::before,
+  .route-divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 9999px;
+    background: theme("colors.route");
+    transform: translateY(-50%);
+  }
+
+  .route-divider::before {
+    left: 0;
+  }
+
+  .route-divider::after {
+    right: 0;
+  }
+
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full bg-marigold px-6 py-3 text-sm font-semibold text-ink shadow-sm transition hover:bg-marigoldDeep hover:text-sand disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full border border-ink/20 bg-transparent px-6 py-3 text-sm font-semibold text-ink transition hover:border-ink hover:bg-ink hover:text-sand;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-ink/80;
+  }
+
+  .field-input {
+    @apply w-full rounded-lg border border-ink/15 bg-white px-3.5 py-2.5 text-sm text-ink placeholder:text-ink/40 focus:border-marigoldDeep focus:outline-none focus:ring-2 focus:ring-marigold/40;
+  }
+
+  .field-error {
+    @apply mt-1 text-xs font-medium text-red-600;
+  }
+}
