@@ -31,8 +31,7 @@ export const destinations = [
     name: "Ladakh",
     country: "India",
     category: "india",
-    image:
-      "https://images.unsplash.com/photo-1589554011533-f1e8a0e5c6a5?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1589554011533-f1e8a0e5c6a5?auto=format&fit=crop&w=1200&q=80",
     description:
       "High-altitude desert, cobalt lakes, and monasteries clinging to cliffs above the Indus.",
     price: 32000,
@@ -42,8 +41,7 @@ export const destinations = [
     name: "Andaman",
     country: "India",
     category: "india",
-    image:
-      "https://images.unsplash.com/photo-1589179447845-9d3e94c9a48d?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1589179447845-9d3e94c9a48d?auto=format&fit=crop&w=1200&q=80",
     description:
       "Reefs you can snorkel straight off the beach, and islands with more coconut trees than people.",
     price: 35000,
